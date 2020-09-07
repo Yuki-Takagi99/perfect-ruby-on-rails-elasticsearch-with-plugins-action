@@ -40,6 +40,7 @@ do
     --detach \
     --network=elastic \
     --name="es${node}" \
+    --entrypoint="" \
     docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION} \
     /bin/sh -vc "${PLUGIN_INSTALL_CMD} /usr/local/bin/docker-entrypoint.sh"
 done
